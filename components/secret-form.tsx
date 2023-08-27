@@ -175,12 +175,10 @@ export function SecretForm() {
               />
             </div>
 
-            {navigator.share && (
-              <Button onClick={onShare}>
-                <Icons.share className="mr-2" width={16} height={16} />
-                Share
-              </Button>
-            )}
+            <Button onClick={onShare}>
+              <Icons.share className="mr-2" width={16} height={16} />
+              Share
+            </Button>
           </div>
         )}
 
