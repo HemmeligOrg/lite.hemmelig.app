@@ -79,7 +79,7 @@ export default function Sensitive() {
         <Input placeholder="Password" type="password" onKeyUp={onSetPassword} />
         {!sensitive && open && (
           <p className="text-red-500 text-sm p-2">
-            [!] Couldn't decrypt the secret. Missing the password?
+            [!] Couldn&apos;t decrypt the secret. Missing the password?
           </p>
         )}
       </div>
