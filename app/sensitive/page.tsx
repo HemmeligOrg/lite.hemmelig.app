@@ -58,11 +58,11 @@ export default function Sensitive() {
         encrypted secrets.
       </p>
 
-      <div className="w-full">
+      <div className="w-full relative">
         {!open && (
-          <div className="flex min-h-[160px] min-w-[896px] absolute backdrop-blur-sm items-center justify-center">
+          <div className="flex min-h-[160px] w-full absolute backdrop-blur-sm items-center justify-center">
             <Button onClick={() => setOpen(true)} variant="outline">
-              <Icons.unlock className="mr-2" width={16} height={16} />
+              <Icons.unlock className="mr-2" width={12} height={12} />
               Show secret
             </Button>
           </div>

@@ -2,7 +2,8 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 type LogoProps = {
   width: number;
   height: number;
-  className: string;
+  className?: string;
+  ariaLabel?: string;
   alt?: string;
 };
 
@@ -200,7 +201,7 @@ export const Icons = {
       <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" />
     </svg>
   ),
-  unlock: (props: LogoProps): React.ReactElement => {
+  unlock: (props: LogoProps): React.ReactElement => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -213,6 +214,6 @@ export const Icons = {
     >
       <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
       <path d="M7 11V7a5 5 0 0 1 9.9-1" />
-    </svg>;
-  },
+    </svg>
+  ),
 };

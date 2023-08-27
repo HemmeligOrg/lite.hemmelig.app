@@ -20,21 +20,21 @@ export function Footer() {
 
         <Link href="https://github.com/HemmeligOrg/lite.hemmelig.app">
           <div className="flex w-full items-center space-x-2">
-            <Icons.gitHub aria-label="Github" width="12" height="12" />
+            <Icons.gitHub aria-label="Github" width={12} height={12} />
             <p className="grid-span-2">Github</p>
           </div>
         </Link>
 
         <Link href="https://x.com/dothash_">
           <div className="flex w-full items-center space-x-2">
-            <Icons.twitter aria-label="twitter x" width="12" height="12" />
+            <Icons.twitter aria-label="twitter x" width={12} height={12} />
             <p className="grid-span-2">Twitter</p>
           </div>
         </Link>
 
         <Link href="https://hemmelig.app">
           <div className="flex w-full items-center space-x-2">
-            <Icons.heartshake aria-label="a heart" width="12" height="12" />
+            <Icons.heartshake aria-label="a heart" width={12} height={12} />
             <p className="grid-span-2">Hemmelig</p>
           </div>
         </Link>

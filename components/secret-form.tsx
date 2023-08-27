@@ -94,9 +94,7 @@ export function SecretForm() {
     return `${window.location.origin}/sensitive#secret=${secret}#decryption_key=${decryptionKey}`;
   };
 
-  function onShare(event: React.MouseEvent<HTMLInputElement>) {
-    event.preventDefault();
-
+  function onShare(): void {
     if (navigator.share) {
       navigator
         .share({
@@ -197,8 +195,8 @@ export function SecretForm() {
         <div className="flex justify-end">
           <Button
             type="submit"
-            variant={decryptionKey ? 'secondary' : ''}
-            readOnly={decryptionKey ? true : false}
+            variant={decryptionKey ? 'secondary' : 'default'}
+            disabled={decryptionKey ? true : false}
           >
             Create a secret link
           </Button>
