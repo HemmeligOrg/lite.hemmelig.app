@@ -11,7 +11,6 @@ import { generateKey, encrypt } from '../app/utils/tweetnacl';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Icons } from '@/components/ui/icons';
-import { ToastAction } from '@/components/ui/toast';
 import { useToast } from '@/components/ui/use-toast';
 
 import {

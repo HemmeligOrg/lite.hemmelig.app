@@ -6,35 +6,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/ui/icons';
-
-import { decrypt } from '../../app/utils/tweetnacl';
+import { getFragment, getSensitiveContent } from '@/lib/utils';
 
 const LOREM_IPSUM =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-
-const hashFragment = new URL(window.location.href)?.hash.split('#');
-
-function getFragment(property: string) {
-  return hashFragment
-    .map((fragment) =>
-      fragment.startsWith(property + '=')
-        ? fragment.split(property + '=')[1]
-        : ''
-    )
-    .filter(Boolean);
-}
-
-function getSensitiveContent(secret: string, decryptionKey: string): string {
-  try {
-    const sensitive = decrypt(secret, decryptionKey);
-
-    return sensitive;
-  } catch (err) {
-    console.error("Couldn't decrypt secret.", 'Missing the password?');
-
-    return '';
-  }
-}
 
 export default function Sensitive() {
   const [open, setOpen] = useState<boolean>(false);
